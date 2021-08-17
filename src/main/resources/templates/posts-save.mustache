@@ -1,0 +1,37 @@
+{{>layout/header}}
+<h1>게시글 등록</h1>
+
+<div class = "col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="title">Id</label>
+                <input type="text" class="form-control" id="Id" placeholder="아이디 입력">
+            </div>
+            <div class="form-group">
+                <label for="title">pw</label>
+                <input type="text" class="form-control" id="pw" placeholder="패스워드 입력">
+            </div>
+            <div class="form-group">
+                <label for="title">name</label>
+                <input type="text" class="form-control" id="name" placeholder="이름 입력">
+            </div>
+            <div class="form-group">
+                <label for="author">email</label>
+                <input type="text" class="form-control" id="email" placeholder="이메일 입력">
+            </div>
+            <div class="form-group">
+                <label for="author">투자 성향</label>
+                <input type="text" class="form-control" id="invValue" placeholder="투자 성향 수치 입력">
+            </div>
+            <div class="form-group">
+                <label for="content">증권 계좌</label>
+                <textarea class="form-control" id="content" placeholder="내용을 입력하시오"></textarea>
+            </div>
+        </form>
+        <a href ="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+    </div>
+</div>
+
+{{>layout/footer}}
