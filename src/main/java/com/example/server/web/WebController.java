@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
-@AllArgsConstructor
 @RequiredArgsConstructor
 public class WebController {
     final MemberService memberService;
@@ -20,9 +19,9 @@ public class WebController {
         return "posts-save";
     }
 
-    @PostMapping("/posts/save")
-    public String regi(@RequestBody MemberDto member){
-        memberService.addUser(member);
-        return "posts-save";
-    }
+    //@PostMapping("/posts/save")
+    //public String regi(@RequestBody MemberDto member){
+    //    memberService.addUser(member);
+     //   return "posts-save";
+    //}
 }

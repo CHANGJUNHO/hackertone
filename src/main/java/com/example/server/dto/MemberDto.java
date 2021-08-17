@@ -6,9 +6,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
 import java.util.List;
 
 @Data
+@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberDto {

@@ -5,16 +5,26 @@ var main ={
             _this.save();
         });
     },
+    //TODO append가 동작하지 않는 이유 확인
+    append : function(){
+        $("#account-add").on('click', function(){
+            $('#bankAccountList').append("<li>" + $('#bank').val() + " " + $('#account').val() + "</li>");
+        }).fail(function (error){
+          alert(JSON.stringify(error));
+        });
+    },
     save : function() {
         var data = {
-            title: $('#title').val(),
-            author: $('#author').val(),
-            content: $('#content').val()
+            id: $('#Id').val(),
+            pw: $('#pw').val(),
+            name: $('#name').val(),
+            email: $('#email').val(),
+            invValue: $('#invValue').val()
         };
 
         $.ajax({
             type: 'POST',
-            url: '/api/v1/posts',
+            url: ,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)

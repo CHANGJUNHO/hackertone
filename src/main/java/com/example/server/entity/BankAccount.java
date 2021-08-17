@@ -4,19 +4,14 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import java.util.List;
 
 @Data
-@Entity
+@Embeddable
 public class BankAccount {
-
-    List<Account> accounts;
-
-    @Data
-    class Account{
-        private String Id = null;
-        private String accountInfo = null;
-        private String pw = null;
-    }
+    String bank;
+    String accountInfo;
+    String pw;
 }

@@ -5,32 +5,41 @@
     <div class="col-md-4">
         <form>
             <div class="form-group">
-                <label for="title">Id</label>
+                <label for="Id">Id</label>
                 <input type="text" class="form-control" id="Id" placeholder="아이디 입력">
             </div>
             <div class="form-group">
-                <label for="title">pw</label>
+                <label for="pw">pw</label>
                 <input type="text" class="form-control" id="pw" placeholder="패스워드 입력">
             </div>
             <div class="form-group">
-                <label for="title">name</label>
+                <label for="name">name</label>
                 <input type="text" class="form-control" id="name" placeholder="이름 입력">
             </div>
             <div class="form-group">
-                <label for="author">email</label>
+                <label for="email">email</label>
                 <input type="text" class="form-control" id="email" placeholder="이메일 입력">
             </div>
             <div class="form-group">
-                <label for="author">투자 성향</label>
+                <label for="invValue">투자 성향</label>
                 <input type="text" class="form-control" id="invValue" placeholder="투자 성향 수치 입력">
             </div>
+        </form>
+        <ol class="form-group" id="bankAccountList">
+            <label for="BankAccount">증권 계좌</label>
+        </ol>
+        <form>
             <div class="form-group">
-                <label for="content">증권 계좌</label>
-                <textarea class="form-control" id="content" placeholder="내용을 입력하시오"></textarea>
+                <label for="bank">bank</label>
+                <input type="text" class="form-control" id="bank" placeholder="증권사 입력">
+                <label for="account">account</label>
+                <input type="text" class="form-control" id="account" placeholder="계좌 번호 입력">
             </div>
         </form>
+        <button type="button" class="btn btn-primary" id="account-add">계좌 등록</button>
         <a href ="/" role="button" class="btn btn-secondary">취소</a>
         <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+
     </div>
 </div>
 
