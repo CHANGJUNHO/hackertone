@@ -4,16 +4,24 @@ var main ={
         $("#btn-save").on('click', function(){
             _this.save();
         });
-    },
-    //TODO append가 동작하지 않는 이유 확인
-    append : function(){
-        $("#account-add").on('click', function(){
-            $('#bankAccountList').append("<li>" + $('#bank').val() + " " + $('#account').val() + "</li>");
-        }).fail(function (error){
-          alert(JSON.stringify(error));
+
+        $("#account-add").on('click', () => {
+            _this.append();
         });
     },
+    append : function(){
+        $('#bankAccountList').append("<li class=list-group-item >" + $('#bank').val() + " " + $('#account').val() + "</li>");
+    },
     save : function() {
+        var items = [];
+        $('#bankAccountList li').each((index, value) => {
+            let item = {};
+            const data = $(value).text().split(' ');
+            item.bank = data[0]
+            item.accountInfo = data[1]
+            items.push(item);
+        });
+
         var data = {
             id: $('#Id').val(),
             pw: $('#pw').val(),
@@ -21,18 +29,14 @@ var main ={
             email: $('#email').val(),
             invValue: $('#invValue').val()
         };
+        data.bankAccounts = items;
 
         $.ajax({
             type: 'POST',
-            url: ,
+            url: '/post/save',
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
-        }).done(function(){
-            alert('글이 등록되었습니다.');
-            window.location.href = '/';
-        }).fail(function (error){
-            alert(JSON.stringify(error));
         });
     }
 };
