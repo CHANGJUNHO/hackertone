@@ -12,4 +12,6 @@ public enum InvestmentPropensity {
     public int getValue() {
         return value;
     }
+
+    public String getPropensity() {return this.name();}
 }

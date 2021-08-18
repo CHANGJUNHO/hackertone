@@ -13,5 +13,4 @@ import java.util.List;
 public class BankAccount {
     String bank;
     String accountInfo;
-    String pw;
 }

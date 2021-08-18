@@ -19,9 +19,10 @@ public class WebController {
         return "posts-save";
     }
 
-    //@PostMapping("/posts/save")
-    //public String regi(@RequestBody MemberDto member){
-    //    memberService.addUser(member);
-     //   return "posts-save";
-    //}
+    @PostMapping("/post/save")
+    public String regi(@RequestBody MemberDto member){
+        System.out.println(member);
+        memberService.addUser(member);
+        return "index";
+    }
 }

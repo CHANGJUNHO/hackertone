@@ -39,7 +39,7 @@ public class MemberDto {
                 this.getPw(),
                 this.getName(),
                 this.getEmail(),
-                this.convInvValue(this.getInvValue()),
+                this.convInvValue(this.getInvValue()).getPropensity(),
                 this.getBankAccounts()
         );
     }
