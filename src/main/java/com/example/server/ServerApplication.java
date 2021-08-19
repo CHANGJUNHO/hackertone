@@ -1,5 +1,6 @@
 package com.example.server;
 
+import com.example.server.repository.ChatRoomRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
