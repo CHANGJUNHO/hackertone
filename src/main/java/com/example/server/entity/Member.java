@@ -22,6 +22,7 @@ public class Member {
     String Id;
     String pw;
     String name;
+    String nickName;
     String email;
     String invPropensity;
     @ElementCollection

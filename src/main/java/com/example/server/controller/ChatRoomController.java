@@ -21,32 +21,33 @@ public class ChatRoomController {
     @PostConstruct
     public void createHall() {
         ChatRoomDto mainHall = chatRoomRepository.createChatRoom("MainHall");
+        System.out.println(chatRoomRepository.findAllRoom());
         HallId = mainHall.getRoomId();
     }
 
-    @GetMapping("/hall")
-    public String rooms(Model model){
-        return "redirect:/room/enter/" + HallId;
+    //채팅리스트 화면
+    @GetMapping("/room")
+    public String roomss(Model model) {
+        return "room";
     }
 
+    // 모든 채팅방 목록 반환
     @GetMapping("/rooms")
     @ResponseBody
     public List<ChatRoomDto> room() {
         return chatRoomRepository.findAllRoom();
     }
-
     // 채팅방 생성
     @PostMapping("/room")
     @ResponseBody
     public ChatRoomDto createRoom(@RequestParam String name) {
         return chatRoomRepository.createChatRoom(name);
     }
-
     // 채팅방 입장 화면
     @GetMapping("/room/enter/{roomId}")
     public String roomDetail(Model model, @PathVariable String roomId) {
         model.addAttribute("roomId", roomId);
-        return "chat/roomdetail";
+        return "/roomdetail";
     }
     // 특정 채팅방 조회
     @GetMapping("/room/{roomId}")

@@ -26,6 +26,7 @@ var main ={
             id: $('#Id').val(),
             pw: $('#pw').val(),
             name: $('#name').val(),
+            nickName: $('#nickName').val(),
             email: $('#email').val(),
             invValue: $('#invValue').val()
         };

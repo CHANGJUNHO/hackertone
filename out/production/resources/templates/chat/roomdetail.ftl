@@ -30,7 +30,7 @@
         </div>
         <ul class="list-group">
             <li class="list-group-item" v-for="message in messages">
-                {{message.sender}} - {{message.message}}</a>
+                <a href="/detail/{{message.sender}}">{{message.sender}} - {{message.message}}</a>
             </li>
         </ul>
         <div></div>

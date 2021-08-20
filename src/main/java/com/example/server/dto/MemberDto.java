@@ -18,6 +18,7 @@ public class MemberDto {
     String Id;
     String pw;
     String name;
+    String nickName;
     String email;
     Long invValue;
     List<BankAccount> bankAccounts;
@@ -38,11 +39,10 @@ public class MemberDto {
                 this.getId(),
                 this.getPw(),
                 this.getName(),
+                this.getNickName(),
                 this.getEmail(),
                 this.convInvValue(this.getInvValue()).getPropensity(),
                 this.getBankAccounts()
         );
     }
-
-    //Dto to Entity Converter
 }
