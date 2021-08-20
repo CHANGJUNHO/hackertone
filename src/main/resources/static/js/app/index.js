@@ -23,10 +23,8 @@ var main ={
         });
 
         var data = {
-            id: $('#Id').val(),
-            pw: $('#pw').val(),
-            name: $('#name').val(),
-            nickName: $('#nickName').val(),
+            password: $('#password').val(),
+            username: $('#username').val(),
             email: $('#email').val(),
             invValue: $('#invValue').val()
         };

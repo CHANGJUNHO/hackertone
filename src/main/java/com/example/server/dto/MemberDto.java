@@ -15,12 +15,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberDto {
-    String Id;
-    String pw;
-    String name;
-    String nickName;
+    String password;
+    String username;
     String email;
     Long invValue;
+    String role = "USER";
     List<BankAccount> bankAccounts;
 
     private InvestmentPropensity convInvValue(Long invValue){
@@ -35,14 +34,13 @@ public class MemberDto {
 
     // Dto to Entity Converter
     public Member convertToMember(){
-        return new Member(
-                this.getId(),
-                this.getPw(),
-                this.getName(),
-                this.getNickName(),
-                this.getEmail(),
-                this.convInvValue(this.getInvValue()).getPropensity(),
-                this.getBankAccounts()
-        );
+        return Member.builder()
+                .password(password)
+                .username(username)
+                .email(email)
+                .invPropensity(convInvValue(invValue).toString())
+                .bankAccounts(bankAccounts)
+                .role(role)
+                .build();
     }
 }
