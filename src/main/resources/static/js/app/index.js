@@ -32,7 +32,7 @@ var main ={
 
         $.ajax({
             type: 'POST',
-            url: '/post/save',
+            url: '/signUp',
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
